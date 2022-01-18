@@ -46,14 +46,13 @@
         app:layout_constraintTop_toBottomOf="@+id/progressBar"
         app:layout_constraintVertical_bias="0.0" />
 
-            <com.luucckkyy.jjeett.ertyfv.jsl.Hkds
+    <com.luucckkyy.jjeett.ertyfv.jsl.Hkds
         android:id="@+id/web"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
         tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="223dp">
-    </com.luucckkyy.jjeett.ertyfv.jsl.Hkds>
+        tools:layout_editor_absoluteY="223dp"></com.luucckkyy.jjeett.ertyfv.jsl.Hkds>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

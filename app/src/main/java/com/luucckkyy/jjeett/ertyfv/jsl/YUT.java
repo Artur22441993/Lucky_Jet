@@ -1,6 +1,7 @@
 package com.luucckkyy.jjeett.ertyfv.jsl;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
@@ -17,14 +18,15 @@ public class YUT extends WebViewClient {
     public static LJ lj;
 
 
-
     @Override
-    public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
-        if (errorResponse.getStatusCode() == 404){
+    public void onPageStarted(WebView view, String url, Bitmap favicon) {
+        super.onPageStarted(view, url, favicon);
+        if(url.contains("404")){
             lj.startActivity(new Intent(lj.getApplicationContext(), MainActivity.class));
             lj.finishAffinity();
         }
     }
+
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
